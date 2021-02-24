@@ -1,38 +1,47 @@
-# Vera
+![vera](/Users/davidcortesfulla/Projectes/vera/vera.jpg)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vera`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Vera is a CLI tool to manage and organize your photos and video files. I created it to automatize my current workflow for editing photos and videos. If you want to automatize yours keep reading. 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Vera requires `exiftool` to work. You can use this script to install all the dependencies and Vera all together.
 
-```ruby
-gem 'vera'
+```bash
+bash <(curl -Ls https://github.com/davebnc87/vera/install.sh)
 ```
 
-And then execute:
+You can also install it manually before you install the gem:
 
-    $ bundle install
+```bash
+brew install exiftool
+gem install vera
+```
 
-Or install it yourself as:
+Once you have it installed you can use any of the following commands.
 
-    $ gem install vera
+## Available Commands
 
-## Usage
+### Timestamp
 
-TODO: Write usage instructions here
+This command fixes the created date and the modified date of the media files. Run the following command in the folder where you have your photos and videos:
 
-## Development
+```bash
+vera timestamp
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+This command works on JPG, MOV, HEIC and ARW files.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+If you want to add more commands, feel free to contribute with a PR to Vera. In the next section I explain how to start working on it.
+
+## Developement
+
+After checking out the repo, run `install.sh` to install dependencies. Then, run `rake spec` to run the tests. 
+
+To install this gem onto your local machine, run `bundle exec rake install`. 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/vera.
+Bug reports and pull requests are welcome on GitHub at https://github.com/davebcn87/vera.
 
 ## License
 

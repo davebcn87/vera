@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'commander/import'
 
-require_relative '../lib/vera.rb'
+require_relative '../lib/vera'
 
 program :name, 'vera'
 program :version, '0.0.1'
@@ -14,7 +14,7 @@ command :timestamp do |c|
   c.summary = 'Fix the timestamp of current folder\'s media'
   c.description = 'Uses picture/movie creation date to change the created and modified date of the media file'
   c.example 'description', 'vera timestamp'
-  c.action do |args, options|
-    Vera::Timestamp::execute(options)
+  c.action do |_args, options|
+    Vera::Timestamp.execute(options)
   end
 end
