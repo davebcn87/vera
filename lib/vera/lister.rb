@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Vera
   class Lister
     def self.all_files(path, ext)

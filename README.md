@@ -1,13 +1,13 @@
-![vera](/Users/davidcortesfulla/Projectes/vera/vera.jpg)
+![vera](vera.jpg)
 
-Vera is a CLI tool to manage and organize your photos and video files. I created it to automatize my current workflow for editing photos and videos. If you want to automatize yours keep reading. 
+Vera is a CLI tool to manage and organize your photos and video files. I created it to automatize my current workflow for editing photos and videos. If you want to automatize yours keep reading.
 
 ## Installation
 
 Vera requires `exiftool` to work. You can use this script to install all the dependencies and Vera all together.
 
 ```bash
-bash <(curl -Ls https://github.com/davebnc87/vera/install.sh)
+bash <(curl -Ls https://git.io/JtbuH)
 ```
 
 You can also install it manually before you install the gem:
@@ -35,9 +35,9 @@ If you want to add more commands, feel free to contribute with a PR to Vera. In 
 
 ## Developement
 
-After checking out the repo, run `install.sh` to install dependencies. Then, run `rake spec` to run the tests. 
+After checking out the repo, run `install.sh` to install dependencies. Then, run `rake spec` to run the tests.
 
-To install this gem onto your local machine, run `bundle exec rake install`. 
+To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Contributing
 

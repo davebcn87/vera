@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 module Vera
   class Timestamp
     def self.execute(options)
+      path = options.path
       path = Dir.pwd if options.path.nil?
       path = File.expand_path(path)
       fix_timestamp_in path
@@ -21,7 +24,7 @@ module Vera
       end
       puts "✅ Correcting timestamp for #{files.length} #{ext} files..."
       files_string = files.map { |f| "\"#{f[:path]}\"" }.join(' ')
-      `exiftool "-FileCreateDate<#{date_property}" "-FileModifyDate<#{date_property}" #{files_string} 2>/dev/null`
+      Exiftool.change_timestamp date_property, files_string
     end
   end
 end

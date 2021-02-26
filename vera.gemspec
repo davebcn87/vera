@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['David Cortés']
   spec.email         = ['david.cortes.18@gmail.com']
 
-  spec.summary       = 'Tools to manage media files easily.'
-  spec.description   = 'This gem helps you manage your media files easily.'
+  spec.summary       = 'CLI tool to organize and manage media files'
+  spec.description   = 'Vera helps you automatize the process of organizing, cleaning and sorting your photo and video files.'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 
