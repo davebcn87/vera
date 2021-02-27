@@ -7,7 +7,7 @@ require 'commander/import'
 require_relative '../lib/vera'
 
 program :name, 'vera'
-program :version, '0.0.1'
+program :version, Vera::VERSION
 program :description, 'Organize media files'
 
 command :timestamp do |c|

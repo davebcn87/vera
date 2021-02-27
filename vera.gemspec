@@ -12,8 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Vera helps you automatize the process of organizing, cleaning and sorting your photo and video files.'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
-
-  # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.homepage      = 'https://github.com/davebcn87/vera'
 
   spec.require_paths = ['lib']
 
