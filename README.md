@@ -26,10 +26,36 @@ Once you have it installed you can use any of the following commands.
 This command fixes the created date and the modified date of the media files. Run the following command in the folder where you have your photos and videos:
 
 ```bash
-vera timestamp
+vera timestamp --path ~/path/example
 ```
 
+#### Options 
+
+| Parameter     | Default Value     | Descripción                                            |
+| ------------- | ----------------- | ------------------------------------------------------ |
+| path (--path) | Current directory | Path where the command will be applied. Non-recursive. |
+
 This command works on JPG, MOV, HEIC and ARW files.
+
+### Rename
+
+Prepends the creation date to the filename. This is useful to prevent having duplicate names in your files, as most cameras have a limited naming convention like IMG_0000.JPG to IMG_9999.JPG. As a result of this this command you will have file names like 2020-02-02-IMG_0000.JPG, which makes having duplicated file names almost impossible.
+
+```bash
+vera rename --path ~/path/example
+```
+
+#### Options
+
+| Parameter     | Default Value     | Descripción                                            |
+| ------------- | ----------------- | ------------------------------------------------------ |
+| path (--path) | Current directory | Path where the command will be applied. Non-recursive. |
+
+This command works on JPG, MOV, HEIC and ARW files.
+
+#### Example
+
+![vera rename](gif/renamer.gif)
 
 If you want to add more commands, feel free to contribute with a PR to Vera. In the next section I explain how to start working on it.
 

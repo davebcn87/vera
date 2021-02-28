@@ -11,11 +11,23 @@ program :version, Vera::VERSION
 program :description, 'Organize media files'
 
 command :timestamp do |c|
-  c.syntax = 'vera rename, [options]'
+  c.syntax = 'vera timestamp [options]'
   c.summary = 'Fix the timestamp of current folder\'s media'
   c.description = 'Uses picture/movie creation date to change the created and modified date of the media file'
   c.example 'description', 'vera timestamp'
+  c.option '--path PATH', 'Where to execute the command. Default value is the current directory.'
   c.action do |_args, options|
     Vera::Timestamp.execute(options)
+  end
+end
+
+command :rename do |c|
+  c.syntax = 'vera rename [options]'
+  c.summary = 'Rename files to include the date at the beggining of the file'
+  c.description = 'Converts IMG_2200.JPG to 2020-02-02-IMG_2200.JPG for all the media files in a folder.'
+  c.example 'description', 'vera rename PATH'
+  c.option '--path PATH', 'Where to execute the command. Default value is the current directory.'
+  c.action do |args, options|
+    Vera::Renamer::execute(options)
   end
 end
