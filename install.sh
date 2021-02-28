@@ -1,7 +1,6 @@
-RESULT=$(which exiftool)
-if [ "$RESULT" != "exiftool not found" ]; then
-  echo "Dependencies already installed and work correctly."
-  exit
+if which exiftool >/dev/null; then
+	echo "Dependencies already installed and work correctly."
+	exit
 fi
 
 VERSION=Image-ExifTool-12.19
@@ -19,8 +18,7 @@ rm /tmp/$VERSION.tar.gz
 rm -rf /tmp/$VERSION
 
 echo "Testing dependencies..."
-RESULT=$(which exiftool)
-if [ "$RESULT" != "exiftool not found" ]; then
+if which exiftool >/dev/null; then
   echo "Dependencies installed correctly."
 else
   echo "Error installing dependencies. Please install exiftool manually."
