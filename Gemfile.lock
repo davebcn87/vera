@@ -1,13 +1,15 @@
 PATH
   remote: .
   specs:
-    vera (0.1.1)
+    vera (0.3.0)
+      colorize
       commander
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    colorize (0.8.1)
     commander (4.5.2)
       highline (~> 2.0.0)
     diff-lcs (1.4.4)
@@ -47,6 +49,7 @@ GEM
     unicode-display_width (2.0.0)
 
 PLATFORMS
+  ruby
   x86_64-darwin-19
 
 DEPENDENCIES
