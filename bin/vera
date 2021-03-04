@@ -31,3 +31,15 @@ command :rename do |c|
     Vera::Renamer::execute(options)
   end
 end
+
+command :safe do |c|
+  c.syntax = 'vera safe [options] --backup="/backupFolder"'
+  c.summary = 'Are this media files safe to delete?'
+  c.description = 'Searches if all the files in the current folder are in your backup folder recursevely.'
+  c.example 'description', 'vera safe --backup="/backupFolder"'
+  c.option '--path PATH', 'Where to execute the command. Default value is the current directory.'
+  c.option '--backup PATH', 'Your backup folder'
+  c.action do |args, options|
+    Vera::Safe::execute(options)
+  end
+end

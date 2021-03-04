@@ -3,11 +3,11 @@
 module Vera
   class Timestamp
     def self.execute(options)
-      unless Exiftool.is_installed?
-        puts """
+      unless Exiftool.installed?
+        puts ''"
           You need to install exiftool to use vera. You can run the following command to do it:
           bash <(curl -Ls https://git.io/JtbuH)
-        """
+        "''
         return
       end
       path = options.path
@@ -25,7 +25,7 @@ module Vera
 
     def self.rename_files_with_date(path, ext, date_property)
       files = Lister.all_files(path, ext)
-      puts "✅ Correcting timestamp for #{files.length} #{ext} files..."
+      puts "#{Icons.check} Correcting timestamp for #{files.length} #{ext} files..."
       if files.empty?
         puts 'Nothing to do here'
         return

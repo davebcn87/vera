@@ -57,9 +57,22 @@ This command works on JPG, MOV, HEIC and ARW files.
 
 ![vera rename](gif/renamer.gif)
 
+### Safe
+
+Should I delete all this media files? Is it **safe**? This command helps you understand that. This command will find the files even if you have changed the original file name of the files. 
+
+```bash
+# Are all the media files in Folder backed up in MY_EXTERNAL_HD?
+vera safe --path="Folder" --backup="/Volumes/MY_EXTERNAL_HD"
+```
+
+You can see it working here:
+
+![vera rename](gif/safe.gif)
+
 If you want to add more commands, feel free to contribute with a PR to Vera. In the next section I explain how to start working on it.
 
-## Developement
+## Development
 
 After checking out the repo, run `install.sh` to install dependencies. Then, run `rake spec` to run the tests.
 
