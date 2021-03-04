@@ -21,12 +21,11 @@ module Vera
       rename_files_with_date path, 'JPG', 'DateTimeOriginal'
       rename_files_with_date path, 'HEIC', 'DateTimeOriginal'
       rename_files_with_date path, 'MOV', 'CreationDate'
-      rename_files_with_date path, 'MP4', 'CreationDate'
     end
 
     def self.rename_files_with_date(path, ext, date_property)
       files = Lister.all_files(path, ext)
-      puts "✅ Correcting timestamp for #{files.length} #{ext} files..."
+      puts "#{Icons.check} Correcting timestamp for #{files.length} #{ext} files..."
       if files.empty?
         puts 'Nothing to do here'
         return

@@ -24,7 +24,7 @@ module Vera
     end
 
     def self.rename_files_with_date(path, ext, date_property)
-      puts "✅ Adding creation date to #{ext} files in the filename"
+      puts "#{Icons.check} Adding creation date to #{ext} files in the filename"
       files = Lister.all_files(path, ext)
       files = Renamer.exclude_already_renamed_files(files)
       if files.empty?
@@ -32,7 +32,7 @@ module Vera
         return
       end
       files_string = files.map { |f| "\"#{f[:path]}\"" }.join(' ')
-      puts '❌Something went wrong' unless Exiftool.change_filename_with_date(date_property, files_string)
+      puts "#{Icons.cross} Something went wrong" unless Exiftool.change_filename_with_date(date_property, files_string)
     end
 
     def self.exclude_already_renamed_files(files)
