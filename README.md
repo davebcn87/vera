@@ -1,4 +1,4 @@
-![vera](vera.jpg)
+![vera](assets/Readme-header.jpg)
 
 Vera is a CLI tool to manage and organize your photos and video files. I created it to automatize my current workflow for editing photos and videos. If you want to automatize yours keep reading.
 
