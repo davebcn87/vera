@@ -21,6 +21,7 @@ module Vera
       rename_files_with_date path, 'JPG',  'DateTimeOriginal'
       rename_files_with_date path, 'HEIC', 'DateTimeOriginal'
       rename_files_with_date path, 'MOV',  'CreationDate'
+      rename_files_with_date path, 'MP4',  'MediaCreateDate'
     end
 
     def self.rename_files_with_date(path, ext, date_property)
