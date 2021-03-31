@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'digest'
+require 'date'
 
 module Vera
   class Media
@@ -24,6 +25,22 @@ module Vera
     def real_hash
       chunk = File.read(@path)
       Digest::SHA1.hexdigest(chunk)
+    end
+
+    def creation_date
+      datetime = Exiftool.creation_date(@path)
+      puts datetime
+      Date.parse(datetime)
+    end
+
+    def creation_month
+    end
+
+    def creation_year
+    end
+
+    def camera
+      Exiftool.camera(@path)
     end
   end
 end

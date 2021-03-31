@@ -1,5 +1,5 @@
-# frozen_string_literal: true
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'rubygems'
 require 'commander/import'
@@ -41,5 +41,18 @@ command :safe do |c|
   c.option '--backup PATH', 'Your backup folder'
   c.action do |args, options|
     Vera::Safe::execute(options)
+  end
+end
+
+command :group do |c|
+  c.syntax = 'vera group [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'vera group_by_date PATH'
+  c.option '--dry-run', 'Not execute the real command'
+  c.option '--path PATH', 'Where to execute the command'
+  c.option '--by type', 'Group by "date", "camera"'
+  c.action do |args, options|
+    Vera::Grouper::execute(options)
   end
 end

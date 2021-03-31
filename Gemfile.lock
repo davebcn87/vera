@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vera (0.3.0)
+    vera (0.3.1)
       colorize
       commander
 
