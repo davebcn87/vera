@@ -46,7 +46,7 @@ RSpec.describe Vera::Renamer do
 
   it 'renames files adding the date' do
     expect(Vera::Lister).to receive(:all_files)
-      .exactly(4).times
+      .exactly(5).times
       .with(anything, anything) {
                               [
                                 { filename: 'some.jpg', path: 'example/some.jpg' },
@@ -55,7 +55,7 @@ RSpec.describe Vera::Renamer do
                             }
     files = '"example/some.jpg" "example/other.jpg"'
     expect(Vera::Exiftool).to receive(:change_filename_with_date)
-      .exactly(4).times
+      .exactly(5).times
       .with(anything, files)
     options = OpenStruct.new({ path: 'example' })
     Vera::Renamer.execute(options)
